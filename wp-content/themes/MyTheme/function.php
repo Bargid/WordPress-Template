@@ -16,4 +16,14 @@ function load_js()
 }
 add_action('wp_enqueue_scripts', 'load_js');
 
+// Image Sizes
+// add_image_size('small', 600, 600, false);
+// add_image_size('my_custom_size', 1200, 600, true);
+
+//Image settings
+add_action( 'after_setup_theme', 'custom_theme_setup' );
+function custom_theme_setup() {
+  add_image_size( 'my_custom_size', 1200, 600, true );
+}
+
 ?>
